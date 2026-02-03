@@ -1,10 +1,17 @@
 const AccountCard = ({ account }) => {
+  // Simple logic to choose icon based on bank name or currency
+  const isInternational = account.bankName.includes("Mercury") || account.currency === "USD";
+
   return (
     <div className="account-card">
       <div className="card-left">
         <div className="bank-icon-placeholder">
-          {/* Use first letter of bank name or a generic icon */}
-          {account.bankName ? account.bankName.charAt(0) : "B"}
+          {/* Bank Symbol vs generic letter */}
+          {isInternational ? (
+            <span style={{ fontSize: "24px" }}>🌍</span>
+          ) : (
+            <span style={{ fontSize: "24px" }}>🏛️</span>
+          )}
         </div>
         <div className="account-details">
           <h3>
@@ -14,13 +21,19 @@ const AccountCard = ({ account }) => {
           <p className="sub-text">{account.accountName}</p>
           <div className="account-number">
             {account.accountNumber}
-            {/* If we had currency logic, maybe show it here or separately */}
-            <span className="copy-icon" style={{ color: '#cbd5e1', cursor: 'pointer', fontSize: '12px', marginLeft: '6px' }}>NOTES</span>
+            <span className="copy-icon" title="Copy Account Number" style={{ cursor: 'pointer', marginLeft: '8px', color: '#cbd5e1', fontSize: '14px' }}>
+              ❐
+            </span>
+            {account.currency === "USD" && <span className="badge-currency">USD</span>}
           </div>
           <div className="status-line">
             <div className="verified-dot"></div>
             <span className="verified-text">Verified</span>
-            <span>• {account.currency || "NGN"} Settlement</span>
+            {account.currency === "USD" ? (
+              <span>• International Wire</span>
+            ) : (
+              <span>• {account.currency || "NGN"} Settlement</span>
+            )}
           </div>
         </div>
       </div>
@@ -39,7 +52,7 @@ const AccountCard = ({ account }) => {
 
       {/* Visual decoration */}
       <div className="card-bg-decoration">
-        🏛️
+        {isInternational ? "🌍" : "🏛️"}
       </div>
     </div>
   );
