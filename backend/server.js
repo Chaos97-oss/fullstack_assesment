@@ -26,3 +26,14 @@ const settlementAccounts = [
         isPrimary: false,
         verified: true
     },
+    {
+    id: 3,
+    bankName: "Mercury (Evolve Bank & Trust)",
+    accountName: "Akinsola Jegede Inc.",
+    accountNumber: "****8821",
+    currency: "USD",
+    type: "International Wire",
+    isPrimary: false,
+    verified: true
+    }
+    ];
