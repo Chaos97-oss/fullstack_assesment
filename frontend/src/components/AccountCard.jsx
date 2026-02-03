@@ -10,3 +10,21 @@ const AccountCard = ({ account }) => {
             justifyContent: "space-between",
             alignItems: "center"
         }}
+        >
+    <div>
+    <h4>
+        {account.bankName}{" "}
+        {account.isPrimary && (
+        <span style={{ color: "green", fontSize: "12px" }}>
+            PRIMARY
+        </span>
+        )}
+    </h4>
+    <p>{account.accountName}</p>
+    <p>{account.accountNumber}</p>
+    <small>
+        {account.currency} · {account.type}
+    </small>
+    <br />
+    <small style={{ color: "green" }}>Verified</small>
+    </div>
