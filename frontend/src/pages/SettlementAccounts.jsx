@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AccountCard from "../components/AccountCard";
-import Sidebar from "../components/sidebar.jsx";
+import Sidebar from "../components/sidebar";
 import InfoBanner from "../components/InfoBanner";
 import "../styles/settlement.css";
 
