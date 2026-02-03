@@ -1,4 +1,4 @@
-import SettlementAccounts from "./pages/SettlementAccounts";
+import SettlementAccounts from "./pages";
 
 function App() {
     return <SettlementAccounts />;
