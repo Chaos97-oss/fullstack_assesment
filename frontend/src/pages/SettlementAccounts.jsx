@@ -11,7 +11,7 @@ const SettlementAccounts = () => {
     useEffect(() => {
         // Keep existing logic
         axios
-        .get("http://localhost:5000/api/settlement-accounts")
+        .get("https://fullstack-assesment-qtbf.onrender.com/")
         .then(res => setAccounts(res.data.data))
         .catch(err => {
             console.error("Failed to fetch", err);
