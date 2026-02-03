@@ -16,12 +16,12 @@ const SettlementAccounts = () => {
         .catch(err => {
             console.error("Failed to fetch", err);
             // Fallback mock data if server is down for UI
-            setAccounts([
-              { id: 1, bankName: "GTBank Plc", accountName: "Akinsola Jegede Enterprises", accountNumber: "0123456789", isPrimary: true, currency: "NGN" },
-              { id: 2, bankName: "Zenith Bank", accountName: "Akinsola Jegede Enterprises", accountNumber: "2008912345", isPrimary: false, currency: "NGN" },
-              { id: 3, bankName: "Mercury (Evolve Bank & Trust)", accountName: "Akinsola Jegede Inc.", accountNumber: "**** 8821", isPrimary: false, currency: "USD" }
+            // setAccounts([
+            //   { id: 1, bankName: "GTBank Plc", accountName: "Akinsola Jegede Enterprises", accountNumber: "0123456789", isPrimary: true, currency: "NGN" },
+            //   { id: 2, bankName: "Zenith Bank", accountName: "Akinsola Jegede Enterprises", accountNumber: "2008912345", isPrimary: false, currency: "NGN" },
+            //   { id: 3, bankName: "Mercury (Evolve Bank & Trust)", accountName: "Akinsola Jegede Inc.", accountNumber: "**** 8821", isPrimary: false, currency: "USD" }
 
-            ]);
+            // ]);
         });
     }, []);
 
