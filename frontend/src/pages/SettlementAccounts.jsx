@@ -11,7 +11,8 @@ const SettlementAccounts = () => {
     useEffect(() => {
         console.log("API URL:", process.env.REACT_APP_API_URL);
         axios
-        .get(`${process.env.REACT_APP_API_URL}/api/settlement-accounts`)
+        .get(`${process.env.REACT_APP_API_URL}/api/settlement-accounts`
+        )
         .then(res => setAccounts(res.data.data))
         .catch(err => {
             console.error("Failed to fetch", err);
