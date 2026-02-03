@@ -9,7 +9,7 @@ const SettlementAccounts = () => {
     const [accounts, setAccounts] = useState([]);
 
     useEffect(() => {
-        // Keep existing logic
+        console.log("API URL:", process.env.REACT_APP_API_URL);
         axios
         .get(`${process.env.REACT_APP_API_URL}/api/settlement-accounts`)
         .then(res => setAccounts(res.data.data))
