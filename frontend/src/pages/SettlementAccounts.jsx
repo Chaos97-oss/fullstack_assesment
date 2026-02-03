@@ -11,3 +11,17 @@ const SettlementAccounts = () => {
         .then(res => setAccounts(res.data.data))
         .catch(err => console.error(err));
     }, []);
+
+    return (
+    <div style={{ padding: "40px", maxWidth: "900px", margin: "auto" }}>
+        <h2>Settlement Accounts</h2>
+        <p>Manage the bank accounts where your settlements are paid out.</p>
+
+        {accounts.map(account => (
+            <AccountCard key={account.id} account={account} />
+        ))}
+        </div>
+    );
+};
+
+export default SettlementAccounts;
