@@ -30,6 +30,35 @@ const SettlementAccounts = () => {
       <Sidebar />
 
       <main className="content">
+        <div className="top-bar">
+          <div className="breadcrumbs">
+            <span className="crumb-passive">Settings</span>
+            <span className="crumb-separator">›</span>
+            <span className="crumb-active">Settlement Accounts</span>
+          </div>
+
+          <div className="top-bar-right">
+            <div className="status-badge-capsule">
+              <div className="status-dot"></div>
+              ACTIVE
+            </div>
+
+            <button className="theme-toggle-btn">
+              🌙
+            </button>
+
+            <div className="user-profile-widget">
+              <div className="user-info-text">
+                <span className="user-name">Akinsola Jegede</span>
+                <span className="user-role">Admin</span>
+              </div>
+              <div className="user-avatar">
+                AJ
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="header">
           <div>
             <h1>Settlement Accounts</h1>
