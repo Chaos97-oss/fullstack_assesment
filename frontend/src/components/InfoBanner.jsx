@@ -1,0 +1,2 @@
+const InfoBanner = () => {
+return (
