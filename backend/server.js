@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require ("express")
 const cors = require("cors");
 
@@ -45,7 +47,7 @@ const settlementAccounts = [
     });
     });
 
-const PORT = 5000;
+// const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
