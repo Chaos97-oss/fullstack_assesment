@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AccountCard from "../components/AccountCard";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar.jsx";
 import InfoBanner from "../components/InfoBanner";
 import "../styles/settlement.css";
 
@@ -15,13 +15,13 @@ const SettlementAccounts = () => {
       .then(res => setAccounts(res.data.data))
       .catch(err => {
         console.error("Failed to fetch", err);
-        // Fallback mock data if server is down for UI dev
-        setAccounts([
-          { id: 1, bankName: "GTBank Plc", accountName: "Akinsola Jegede Enterprises", accountNumber: "0123456789", isPrimary: true, currency: "NGN" },
-          { id: 2, bankName: "Zenith Bank", accountName: "Akinsola Jegede Enterprises", accountNumber: "2008912345", isPrimary: false, currency: "NGN" },
-          { id: 3, bankName: "Mercury (Evolve Bank & Trust)", accountName: "Akinsola Jegede Inc.", accountNumber: "**** 8821", isPrimary: false, currency: "USD" }
+        // Fallback mock data if server is down for UI
+        // setAccounts([
+        //   { id: 1, bankName: "GTBank Plc", accountName: "Akinsola Jegede Enterprises", accountNumber: "0123456789", isPrimary: true, currency: "NGN" },
+        //   { id: 2, bankName: "Zenith Bank", accountName: "Akinsola Jegede Enterprises", accountNumber: "2008912345", isPrimary: false, currency: "NGN" },
+        //   { id: 3, bankName: "Mercury (Evolve Bank & Trust)", accountName: "Akinsola Jegede Inc.", accountNumber: "**** 8821", isPrimary: false, currency: "USD" }
 
-        ]);
+        // ]);
       });
   }, []);
 

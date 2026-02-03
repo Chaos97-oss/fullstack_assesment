@@ -67,19 +67,20 @@ body {
   margin: 0;
 }
 
+/* Sidebar Navigation */
 .sidebar-nav {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .menu-title {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   color: #94A3B8;
   margin: 0 0 10px 12px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -88,13 +89,19 @@ body {
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  color: #64748B;
+  color: #475569;
+  /* Slightly darker grey */
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
+  /* Standard size */
   font-weight: 500;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.2s;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
 }
 
 .nav-item:hover {
@@ -105,7 +112,10 @@ body {
 .nav-item .icon {
   width: 20px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  /* Standard icon size */
+  display: flex;
+  justify-content: center;
 }
 
 /* Submenu logic */
@@ -126,20 +136,22 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 4px;
-  padding-left: 32px;
-  /* Indent + Icon width offset */
-  border-left: 1px solid transparent;
+  padding-left: 0;
 }
 
 .submenu-item {
-  padding: 6px 12px;
-  font-size: 12px;
+  padding: 8px 12px 8px 44px;
+  /* 12px (padding) + 20px (icon) + 12px (gap) = 44px alignment */
+  font-size: 14px;
   color: #64748B;
   cursor: pointer;
   text-decoration: none;
-  border-left: 1px solid #E2E8F0;
-  margin-left: -1px;
-  /* Overlap border */
+  border-left: 2px solid transparent;
+  margin-left: 0;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
 }
 
 .submenu-item:hover {
@@ -150,8 +162,8 @@ body {
   background-color: #EFF6FF;
   color: #1E40AF;
   font-weight: 500;
+  border-left: 2px solid #2563EB;
   border-radius: 0 6px 6px 0;
-  border-left: 2px solid #1E40AF;
 }
 
 /* Logout */
