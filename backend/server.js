@@ -7,7 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors({origin: [
     "http://localhost:3000",
-    "https://your-frontend.vercel.app"
+    "https://vitalswapassesment.vercel.app",
+    "https://vitalswapassesment-git-master-chaos-97oss-projects.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true}));
