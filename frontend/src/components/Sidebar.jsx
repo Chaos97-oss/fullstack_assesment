@@ -8,3 +8,13 @@ const Sidebar = () => {
         <a>Transactions</a>
         <a>Accounts</a>
         <a>Payment Link</a>
+
+            <p className="menu-title">CONFIGURATION</p>
+        <a className="active">Settlement Accounts</a>
+        <a>Security</a>
+        <a>Webhooks</a>
+        <a>API Docs</a>
+        </nav>
+    </aside>
+    );
+};
