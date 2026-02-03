@@ -1,12 +1,18 @@
 const InfoBanner = () => {
-return (
+  return (
     <div className="info-banner">
-      <strong>About Settlement Accounts</strong>
-      <p>
-        Settlement accounts are external bank accounts where you receive payouts
-        from your wallet. Ensure the account name matches your registered
-        business name to avoid delays.
-      </p>
+      <div className="info-icon">
+        <i className="fas fa-info-circle"></i>{/* Assuming FontAwesome or similar, or just text 'i' */}
+        ℹ️
+      </div>
+      <div className="info-banner-content">
+        <h4>About Settlement Accounts</h4>
+        <p>
+          Settlement accounts are external bank accounts where you receive payouts
+          from your wallet. Ensure the account name matches your registered
+          business name to avoid delays. Changes to settlement accounts may require additional verification.
+        </p>
+      </div>
     </div>
   );
 };
