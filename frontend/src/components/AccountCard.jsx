@@ -1,42 +1,23 @@
 const AccountCard = ({ account }) => {
-    return (
-        <div
-        style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "20px",
-            marginBottom: "15px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
-        }}
-        >
-    <div>
-    <h4>
-        {account.bankName}{" "}
-        {account.isPrimary && (
-        <span style={{ color: "green", fontSize: "12px" }}>
-            PRIMARY
-        </span>
-        )}
-    </h4>
-    <p>{account.accountName}</p>
-    <p>{account.accountNumber}</p>
-    <small>
-        {account.currency} · {account.type}
-    </small>
-    <br />
-    <small style={{ color: "green" }}>Verified</small>
+  return (
+    <div className="account-card">
+      <div className="left">
+        <h4>
+          {account.bankName}
+          {account.isPrimary && <span className="badge">PRIMARY</span>}
+        </h4>
+        <p>{account.accountName}</p>
+        <p className="account-number">{account.accountNumber}</p>
+        <span className="verified">● Verified · {account.currency}</span>
+      </div>
+
+      <div className="actions">
+        {!account.isPrimary && <button>Set as Primary</button>}
+        <button className="icon">✏️</button>
+        <button className="icon">🗑️</button>
+      </div>
     </div>
+  );
+};
 
-    <div>
-        {!account.isPrimary && (
-            <button style={{ marginRight: "10px" }}>Set as Primary</button>
-            )}
-            <button>Edit</button>
-        </div>
-        </div>
-    );
-    };
-
-    export default AccountCard;
+export default AccountCard;
