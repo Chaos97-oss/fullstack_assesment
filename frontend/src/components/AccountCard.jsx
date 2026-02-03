@@ -28,3 +28,15 @@ const AccountCard = ({ account }) => {
     <br />
     <small style={{ color: "green" }}>Verified</small>
     </div>
+
+    <div>
+        {!account.isPrimary && (
+            <button style={{ marginRight: "10px" }}>Set as Primary</button>
+            )}
+            <button>Edit</button>
+        </div>
+        </div>
+    );
+    };
+
+    export default AccountCard;
