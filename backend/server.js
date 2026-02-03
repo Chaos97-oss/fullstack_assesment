@@ -37,3 +37,9 @@ const settlementAccounts = [
     verified: true
     }
     ];
+
+    app.get("/api/settlement-accounts", (req, res) => {
+    res.json({
+        success: true,
+        data: settlementAccounts
+    });
