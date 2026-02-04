@@ -13,8 +13,8 @@
 - Responsive dashboard layout
 
 ## Live Demo
-Frontend: https://vitalswap-assessment.vercel.app
-Backend API: https://your-backend-name.onrender.com/api/settlement-accounts
+Frontend: https://vitalswapassesment.vercel.app
+Backend API: https://fullstack-assesment-qtbf.onrender.com/api/settlement-accounts
 
 ## How to Run Locally
 
